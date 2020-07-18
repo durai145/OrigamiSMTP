@@ -101,7 +101,7 @@ public class OrigamiSMTP implements Callable<Integer>{
 			java.lang.System.setProperty("sun.security.ssl.allowUnsafeRenegotiation", "true");
 			java.lang.System.setProperty("sun.security.ssl.allowLegacyHelloMessages", "true");
 			Socket ssls = null;
-			System.out.println("Starting SMTP");
+			System.out.println("Starting SMTP " + port);
 			InetSocketAddress bindAddress = new InetSocketAddress(port);
 			smtpSocket = new ServerSocket();
 			smtpSocket.setReuseAddress(true);
