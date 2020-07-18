@@ -4,7 +4,7 @@
   <groupId>com.pessetto.origamismtp</groupId>
   <artifactId>OrigamiSMTP</artifactId>
   <name>Origami SMTP</name>
-  <version>2.0.0</version>
+  <version>2.0.1</version>
   <description>A TLS Enabled Fake SMTP Server for Development https://travispessetto.github.io/OrigamiSMTP</description>
   <url>https://travispessetto.github.io/OrigamiSMTP/</url>
   <developers>
@@ -117,11 +117,6 @@
         </executions>
         <configuration>
           <finalName>${project.artifactId}-${project.version}</finalName>
-          <archive>
-            <manifest>
-              <mainClass>com.pessetto.origamismtp.OrigamiSMTP</mainClass>
-            </manifest>
-          </archive>
         </configuration>
       </plugin>
       <plugin>
@@ -132,18 +127,6 @@
             <id>attach-sources</id>
             <goals>
               <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.0.0</version>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
             </goals>
           </execution>
         </executions>
